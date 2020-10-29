@@ -1,7 +1,9 @@
 //multiple pointers employs the use of
 //dual pointers. each is acted on by different
 //triggers. together, they search the data
-//in the array 
+//in a sorted array 
+
+//in case you need to sort anything, try .sort()
 
 //this function has pointers at the beginning 
 //and end of an array
@@ -27,9 +29,8 @@ function countUniqueValues(arr) {
     if (arr.length === 0) return 0; 
     //this is the first pointer's index
     let i = 0; 
-    //p inside this for loop is the second 
-    //pointer's index
-    for (let p = 1; p < arr.length; j++) { 
+    //p variable inside this for loop is the second pointer's index
+    for (let p = 1; p < arr.length; p++) { 
         if (arr[i] !== arr[p]) { 
             i++; 
             arr[i] = arr[p]; 
