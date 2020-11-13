@@ -21,8 +21,23 @@ function swap(arr, idx1, idx2) {
 
 //ES2015
 const swap = (arr, idx1, idx2) => { 
-    [arr[idx1[], arrisx2]] = [arr[idx2], arr[idx1]]; 
+    [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]]; 
 }
+
+//********************************************************
+
+//PSEUDOCODE
+
+//1. Start looping from a variable called i 
+//the end of the arrya towards the beginning.
+//2. Start an inner loop with a variable called j 
+//from the beginning until i - 1
+//3. If arr[j] is greater than arr[j+1], swap those two values
+//4. Return the sorted array
+
+//********************************************************
+
+
 
 
 
