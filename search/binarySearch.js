@@ -43,4 +43,12 @@ function binarySearch(arr, elem) {
 
 }
 
-console.log(binarySearch([2,5,6,9,13,15,28,30], 15))
+console.log(binarySearch([2, 5, 6, 9, 13, 15, 28, 30], 15))
+
+//********************************************************
+
+//BIG O
+
+//Best - O(1)
+//Average - O(log n)
+//Worst - O(log n)

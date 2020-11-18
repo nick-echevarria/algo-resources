@@ -26,7 +26,7 @@ console.log(linearSearch([10, 15, 20, 25, 30], 15))
 
 //********************************************************
 
-//Big O - Linear Search
+//BIG O
 
 //Best - O(1)
 //Average - O(n)
