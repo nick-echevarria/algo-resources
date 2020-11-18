@@ -109,8 +109,6 @@ function collectOddValues(arr) {
 //                      [5].concat(collectOddValues([]))
 //                            return newArr (which equals [])
 
-//********************************************************
-
 //Pure Recursion Tips
 //1. For array, use methods like slice, the spread operator, 
 //and concat that make copies as to not mutate them
@@ -118,6 +116,8 @@ function collectOddValues(arr) {
 //substr, or substring to make copies of them
 //3. Use Object.assign or the spread operator to
 //make copies of objects
+
+//********************************************************
 
 //Common Pitfalls with Recursion
 //1. No base case OR base case is wrong
