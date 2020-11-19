@@ -16,3 +16,27 @@
 
 //********************************************************
 
+function naiveSearch(long, short) {
+
+    let matchCount = 0; 
+
+    for (let i = 0; i < long.length; i++) { //looping over long string
+        for (let j = 0; j < short.length; j++) { //looping over short string
+            //if the short string's element is not the long string's 
+            //element + 1, break out of loop
+            if (short[j] !== long[i + j]) {
+                break;
+            }
+            //if we find a whole match, the element's index
+            //will be the same, thus we increment matchCount
+            if (j === short.length - 1) {
+                matchCount++;
+            }
+        }
+    }
+
+    return matchCount; 
+
+}
+
+naiveSearch("lorie loled", "lol")
