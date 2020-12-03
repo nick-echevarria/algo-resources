@@ -28,7 +28,7 @@
 
 //********************************************************
 
-function merge(arr1, arr2){ 
+export function merge(arr1, arr2){ 
     let results = []; 
     let i = 0; 
     let j = 0; 
@@ -51,3 +51,4 @@ function merge(arr1, arr2){
     }
     return results; 
 }
+
