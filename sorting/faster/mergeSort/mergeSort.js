@@ -30,3 +30,8 @@ function mergeSort(arr) {
     let right = mergeSort(arr.slice(mid));
     return merge(left, right);
 }
+
+//********************************************************
+
+//Best/Average/Worst Time O(n log n)
+//Space O(n)
