@@ -1,4 +1,4 @@
-import swap from '../quadratic/bubbleSort.js'
+import swap from '../quadratic/bubbleSort.js.js'
 
 //In order to implement merge sort, it's useful to first
 //implement a function responsible for arranging elements, 
