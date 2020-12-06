@@ -30,3 +30,12 @@ function quickSort(arr, left = 0, right = arr.length - 1) {
     }
     return arr;
 }
+
+//********************************************************
+
+//BIG O
+
+//Best/Average - O(n log n)
+//Worst (when pivot always chooses first) - O(n2)
+
+//Space - O(log n)
