@@ -8,3 +8,17 @@
 
 //********************************************************
 
+//PSEUDOCODE
+
+//1. Define a function that accepts a list of numbers + figure 
+//   out how many digits the largest number has
+//2. Loop from i = 0 up to this largest number of digits
+//3. For each loop iteration: 
+//   a. Create buckets for each digit (0 to 9)
+//   b. Place each number in the corresponding bucket 
+//   based on i
+//4. Replace existing array with values in our buckets, 
+//   starting with 0 and going to 9 
+//5. Return list at end
+
+//********************************************************
