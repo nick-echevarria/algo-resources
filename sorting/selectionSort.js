@@ -1,0 +1,23 @@
+// Selection sort is similar to bubble sort, but
+// instead of first placing large values into 
+// sorted position, it places small values into 
+// sorted position. 
+
+// For example: 
+
+// [5, 3, 4, 1, 2] becomes [1, 3, 4, 5, 2]
+
+// ********************************************************
+
+//PSUEDOCODE
+
+// 1. Store the first eleemnt as the smallest value
+// you've seen so far.
+// 2. Compare this item to the next item in the
+// array until you find a smaller number.
+// 3. If a smaller number is found, designate that smaller number
+// to be the new minimum and continue until the end of the array.
+// 4. If the min is not the value(index) you began
+// with, swap the values. 
+// 5. Repeat this with the next element until the
+// next array is sorted.

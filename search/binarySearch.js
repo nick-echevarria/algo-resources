@@ -1,4 +1,4 @@
-//Binary search is a must faster form of search
+//Binary search is a much faster form of search
 //Instead of eliminating one element at a time, 
 //you eliminate half of the remaining elements
 

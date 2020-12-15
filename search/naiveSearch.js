@@ -1,4 +1,4 @@
-//Suppose uou want to count the number of times a
+//Suppose you want to count the number of times a
 //smaller string appears in a longer string
 
 //********************************************************
