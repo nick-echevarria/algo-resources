@@ -45,6 +45,7 @@ function selectionSort(arr) {
 selectionSort([34, 22, 10, 19, 17])
 
 // ********************************************************
+
 // BIG O
 
 //Not terribly efficient, so On^2
