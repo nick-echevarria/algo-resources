@@ -1,4 +1,6 @@
-//Can we imporve on  O(n log n)? Yes, but not by making 
+import './radixSortHelpers';
+import { mostDigits } from './radixSortHelpers';
+//Can we imporve on  O(n log n)? Yes, but not by making
 //comparisons, and only in certain cases. 
 
 //Radix sort is a special sorting algorithm that works only 
@@ -22,3 +24,17 @@
 //5. Return list at end
 
 //********************************************************
+
+function radixSort(nums) {
+    let maxDigitCount = mostDigits(nums);
+
+    for (let k = 0; k < maxDigitCount; k++){ 
+        let digitBuckets = Array.from({ length: 10 }, () => []);
+        for (let i = 0; i < nums.length; i++){ 
+            let digit = getDigit(nums[i], k); 
+            digitBuckets[digit].push(nums[i]);
+        }
+        nums = [].concat(...digitBuckets);
+    }
+    return nums;
+}
