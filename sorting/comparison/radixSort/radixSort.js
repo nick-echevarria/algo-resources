@@ -38,3 +38,11 @@ function radixSort(nums) {
     }
     return nums;
 }
+
+//********************************************************
+
+//BIG O
+
+//Best/Average/Worst - O(nk) 
+//(n = number of integers, k = length of those numbers)
+//Space - O(n + k)
