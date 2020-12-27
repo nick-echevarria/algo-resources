@@ -20,3 +20,15 @@ class Student {
         this.lastName = lastName; 
     }
 }
+
+// To instantiate new objects from a class, use the new keyword. 
+
+let firstStudent = new Student("Nick", "Echevarria"); 
+let secondStudent = new Student("Giulia", "Marchini"); 
+
+//********************************************************
+
+// Instance Methods 
+
+
+
