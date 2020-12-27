@@ -1,26 +1,26 @@
-import merge from './mergeArrays.js'
+import merge from './mergeSortHelper.js'
 
-//Combination of splitting, sorting and merging actions
+// Combination of splitting, sorting and merging actions
 
-//Exploits the fact that arrays of 0 or 1 element are
-//always sorted.
+// Exploits the fact that arrays of 0 or 1 element are
+// always sorted.
 
-//Works by decomposing an array into smaller arrays or 0 to 
-//1 elements, then building up a newly sorted array
+// Works by decomposing an array into smaller arrays of 0 to 
+// 1 elements, then building up a newly sorted array
 
 //********************************************************
 
 //PSEUDOCODE
 
-//1. Break arrays (and subarrays) into halves using slice() 
+// 1. Break arrays (and subarrays) into halves using slice() 
 //   recursively
-//2. Then, merge smaller sorted arrays into one sorted array
-//3. Return the newly sorted + merged array
+// 2. Then, merge smaller sorted arrays into one sorted array
+// 3. Return the newly sorted + merged array
 
 //********************************************************
 
 function mergeSort(arr) { 
-    //we have to use mergeSort recurisvely, 
+    //we have to use mergeSort recursively, 
     //so let's start with the base case
     if (arr.length <= 1) return arr; 
     let mid = Math.floor(arr.length / 2);

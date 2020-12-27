@@ -11,7 +11,7 @@
 
 //PSUEDOCODE
 
-// 1. Store the first eleemnt as the smallest value
+// 1. Store the first element as the smallest value
 // you've seen so far.
 // 2. Compare this item to the next item in the
 // array until you find a smaller number.
@@ -20,7 +20,7 @@
 // 4. If the min is not the value(index) you began
 // with, swap the values. 
 // 5. Repeat this with the next element until the
-// next array is sorted.
+// array is sorted.
 
 // ********************************************************
 

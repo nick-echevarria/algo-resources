@@ -1,17 +1,17 @@
-//In order to implement merge sort, it's useful to have a 
-//functon for merging sorted arrays into a larger, sorted 
-//array. 
+// In order to implement merge sort, it's useful to have a 
+// function for merging sorted arrays into a larger, sorted 
+// array. 
 
-//The function should run in O(n + m) time and O(n+m) space 
-//and should not modify the parameters passed to it. 
+// The function should run in O(n + m) time and O(n+m) space 
+// and should not modify the parameters passed to it. 
 
 //********************************************************
 
 //PSUEDOCODE
 
-//1. Create an empty array and behin at the smallest values 
-//in both arrays
-//2. While i/j have not hit the end of their respective arrays:
+// 1. Create an empty array and take a look at the smallest values 
+// in both arrays
+// 2. While i/j have not hit the end of their respective arrays:
 
 //      a. If the value in the first array is smaller than 
 //      the value in the second array, push the value in the first 
