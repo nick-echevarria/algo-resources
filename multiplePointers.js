@@ -1,5 +1,5 @@
-//multiple pointers employs the use of
-//dual pointers. each is acted on by different
+//Multiple pointers employs the use of
+//dual pointers. Each is acted on by different
 //triggers. together, they search the data
 //in a sorted array 
 
