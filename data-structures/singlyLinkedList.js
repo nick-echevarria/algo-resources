@@ -82,6 +82,37 @@ class SinglyLinkedList{
         }
         return current; 
     }
+    shift() { 
+        if (!this.head) return undefined; 
+        var currentHead = this.head; 
+        this.head = currentHead.next; 
+        this.length--; 
+        if (this.length === 0) { 
+            this.tail = null; 
+        }
+        return currentHead; 
+    }
+    unshift(val) {
+        let newNode = new Node(val); 
+        if (!this.head) {
+            this.head = newNode; 
+            this.tail = this.head; 
+        }  
+        newNode.next = this.head; 
+        this.head = newNode; 
+        this.length++; 
+        return this; 
+    }
+    get(index) { 
+        if (index < 0 || index >= this.length) return null; 
+        let counter = 0; 
+        let current = this.head; 
+        while(counter !== index) { 
+            current = current.next; 
+            counter++; 
+        }
+        return current 
+    }
 }
 
 //********************************************************
@@ -110,20 +141,11 @@ class SinglyLinkedList{
 // Decrement the length by 1. 
 // Finally, return the value of the node removed.
 
-shift() { 
-    if (!this.head) return undefined; 
-    var currentHead = this.head; 
-    this.head = currentHead.next; 
-    this.length--; 
-    if (this.length === 0) { 
-        this.tail = null; 
-    }
-    return currentHead; 
-}
+
 
 //********************************************************
 
-//Shift
+//Unshift
 
 //PSEUDOCODE
 // The function shoulkd accept a value 
@@ -131,13 +153,23 @@ shift() {
 // If there is no head property on the list, set the head and tail to be newly created node
 // Otherwise, set the newly created node's next property to be the current head 
 // property on the list 
-//Set the head property on the list to be that newly created node
-//Increment the length of the list by 1 
-//Return the linked list
+// Set the head property on the list to be that newly created node
+// Increment the length of the list by 1 
+// Return the linked list
 
-unshift() { 
+//********************************************************
 
-}
+//Get
+//Retrieve a node by it's positon in the linked list 
+
+//PSEUDOCODE
+// The function should accept a value 
+// If the index is less than zero or gretaer than the length of the list, return null
+// Loop through the list until you reach the index and return the node at that specific index 
+
+
+
+
 
 
 
