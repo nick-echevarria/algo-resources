@@ -58,9 +58,89 @@ class SinglyLinkedList{
         return this; 
         // increment by 1
     }
+    pop() {
+        //edge case
+        if (!this.head) return undefined; 
+        //loop through list
+        var current = this.head; 
+        var newTail = current; 
+        //while there is a next, we move forward in this loop
+        while (current.next) { 
+            newTail = current; 
+            current = current.next; 
+        }
+        //move tail to point to newTail 
+        this.tail = newTail; 
+        //severs connection of node 
+        this.tail.next = null; 
+        //change list length 
+        this.length--; 
+        //edge case: if length === 0 ; able to be refactored into one line 
+        if (this.length === 0) { 
+            this.head = null; 
+            this.tail = null; 
+        }
+        return current; 
+    }
 }
 
-let list = new SinglyLinkedList();
-list.push("Hello")
-list.push("Goodbye") 
+//********************************************************
+
+//POP involves going through the entire list from the beginning since
+//we have no backwards pointer 
+
+//PSEUDOCODE
+
+// If there are no nodes in the list, return undefined (mo head, if length === 0)
+// Loop through the list until you reach the tail
+// Set the next property of the 2nd to lasty node to be null
+// Set the tail to be the 2nd to last node 
+// Decrement the length of the list by 1
+// Return the value of the node removed
+
+//********************************************************
+
+//Shift
+
+//PSEUDOCODE
+
+// If there aren't any nodes, return undefined. This is our main edge case. 
+// Store the current head property in a variable. 
+// Set the head property to be the current head's next property. 
+// Decrement the length by 1. 
+// Finally, return the value of the node removed.
+
+shift() { 
+    if (!this.head) return undefined; 
+    var currentHead = this.head; 
+    this.head = currentHead.next; 
+    this.length--; 
+    if (this.length === 0) { 
+        this.tail = null; 
+    }
+    return currentHead; 
+}
+
+//********************************************************
+
+//Shift
+
+//PSEUDOCODE
+// The function shoulkd accept a value 
+// Create a new node using the value passed to the function 
+// If there is no head property on the list, set the head and tail to be newly created node
+// Otherwise, set the newly created node's next property to be the current head 
+// property on the list 
+//Set the head property on the list to be that newly created node
+//Increment the length of the list by 1 
+//Return the linked list
+
+unshift() { 
+
+}
+
+
+
+
+
 
