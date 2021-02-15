@@ -131,7 +131,7 @@ class SinglyLinkedList{
 
 //********************************************************
 
-//Shift
+//SHIFT
 
 //PSEUDOCODE
 
@@ -145,7 +145,7 @@ class SinglyLinkedList{
 
 //********************************************************
 
-//Unshift
+//UNSHIFT
 
 //PSEUDOCODE
 // The function shoulkd accept a value 
@@ -159,13 +159,24 @@ class SinglyLinkedList{
 
 //********************************************************
 
-//Get
-//Retrieve a node by it's positon in the linked list 
+//GET retrieves a node by it's positon in the linked list 
 
 //PSEUDOCODE
 // The function should accept a value 
 // If the index is less than zero or gretaer than the length of the list, return null
 // Loop through the list until you reach the index and return the node at that specific index 
+
+/********************************************************
+
+//SET changes the value of a node based on its position in the Linked List
+
+//PSEUDOCODE
+// The function should accept a index and value
+// Use get function to find the specific node
+// If node is not found, return false
+// If it is, set value of that node to be the value passed to the function and return true
+
+
 
 
 
