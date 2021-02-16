@@ -121,6 +121,23 @@ class SinglyLinkedList{
         }
         return false; 
     }
+    insert(index, val) {
+        if (index < 0 || index > this.length) return false; 
+        //push + unshift currently do not return booleans. Instead of
+        //changing original instance methods, we can add !! to doubly-
+        //negate and coerce a boolean value from functions that do not.
+        if (index === this.length) return !!this.push(val); // same as multi-line conditional: executes function then returns true or faslse
+        if (index === 0) return !!this.unshift(val);
+        
+        let newNode = new Node(val); 
+        let prev = this.get(index - 1);
+        let temp = prev.next; 
+
+        prev.next = newNode; //we don't to delete the prev node
+        newNode.next = temp; 
+        this.length++; 
+        return true; 
+    }
 }
 
 //********************************************************
@@ -148,8 +165,6 @@ class SinglyLinkedList{
 // Set the head property to be the current head's next property. 
 // Decrement the length by 1. 
 // Finally, return the value of the node removed.
-
-
 
 //********************************************************
 
@@ -184,8 +199,21 @@ class SinglyLinkedList{
 // If node is not found, return false
 // If it is, set value of that node to be the value passed to the function and return true
 
+/********************************************************
 
+//INSERT adds a node to the Linked List at a specific position
 
+//PSEUDOCODE
+// The function should accept an index and value
+// If index is less than zero or greater than the length, return false 
+// If index is the same as the length. push a new node to the end of the lisst. 
+// If index is 0, unshift a new node to the start of the list
+// Use get function, pass in index - 1 (because we need the node before it) 
+// to find the specific node 
+// Set the next property on that node to be the new node 
+// Set the next property omn that new node to be thge previous next
+// Increment the length 
+// Return true 
 
 
 
