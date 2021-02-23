@@ -149,6 +149,22 @@ class SinglyLinkedList{
 
         return removed; 
     }
+    reverse() {
+        let node = this.head;
+        this.head = this.tail; 
+        this.tail = node; 
+        let prev = null; 
+        let next;
+
+        for (let i = 0; i < this.length; i++) { 
+            next = node.next; 
+            node.next = prev; 
+            prev = node; 
+            node = next; 
+        }
+        
+        return this;
+    }
 }
 
 //********************************************************
@@ -251,7 +267,16 @@ class SinglyLinkedList{
 //Set next to be the next property on whatver node is
 //Set the next property on the node to be whatver prev is 
 //Set prev to be the balue of the node variable
-//Set the node varibale to the value of the nexy variable. 
+//Set the node varibale to the value of the next variable. 
+
+//********************************************************
+
+//BIG O
+
+//Insertion O(1)(constant)
+//Removal O(1) or O(n)
+//Searching O(n)
+//Access O(n)
 
 
 
