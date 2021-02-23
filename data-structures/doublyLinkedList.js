@@ -64,6 +64,20 @@ class DoublyLinkedList {
         this.length--; 
         return oldHead; 
     }
+    unshift(val) { 
+        let newNode = new Node(val); 
+
+        if (this.length === 0) { 
+            this.head = newNode; 
+            this.tail = newNode;
+        } else { 
+            this.head.prev = newNode; 
+            newNode.next = this.head; 
+            this.head = newNode; 
+        }
+        this.length++; 
+        return this; 
+    }
 }
 
 //********************************************************
@@ -99,3 +113,13 @@ class DoublyLinkedList {
 //Set the old head's next to nill
 //Decrement the length 
 //Return old head 
+
+//********************************************************
+
+//UNSHIFT Pseudocode 
+//Create new node with passed in value 
+//If length is 0, set head + tail to be new node
+//Otherwise: 
+//set the prev prop on the head of the list to be the new node 
+//Set the next property on the new node to be the head prop
+//Update the head to be the new node
