@@ -58,6 +58,15 @@ class SinglyLinkedList{
         return this; 
         // increment by 1
     }
+    //POP involves going through the entire list from the beginning since
+    //we have no backwards pointer 
+    //PSEUDOCODE
+    // If there are no nodes in the list, return undefined (mo head, if length === 0)
+    // Loop through the list until you reach the tail
+    // Set the next property of the 2nd to lasty node to be null
+    // Set the tail to be the 2nd to last node 
+    // Decrement the length of the list by 1
+    // Return the value of the node removed
     pop() {
         //edge case
         if (!this.head) return undefined; 
@@ -82,6 +91,12 @@ class SinglyLinkedList{
         }
         return current; 
     }
+    //SHIFT Pseudocode
+    // If there aren't any nodes, return undefined. This is our main edge case. 
+    // Store the current head property in a variable. 
+    // Set the head property to be the current head's next property. 
+    // Decrement the length by 1. 
+    // Finally, return the value of the node removed.
     shift() { 
         if (!this.head) return undefined; 
         var currentHead = this.head; 
@@ -92,6 +107,15 @@ class SinglyLinkedList{
         }
         return currentHead; 
     }
+    //UNSHIFT Pseudocode
+    // The function shoulkd accept a value 
+    // Create a new node using the value passed to the function 
+    // If there is no head property on the list, set the head and tail to be newly created node
+    // Otherwise, set the newly created node's next property to be the current head 
+    // property on the list 
+    // Set the head property on the list to be that newly created node
+    // Increment the length of the list by 1 
+    // Return the linked list
     unshift(val) {
         let newNode = new Node(val); 
         if (!this.head) {
@@ -103,6 +127,11 @@ class SinglyLinkedList{
         this.length++; 
         return this; 
     }
+    //GET retrieves a node by it's positon in the linked list 
+    //PSEUDOCODE
+    // The function should accept a value 
+    // If the index is less than zero or gretaer than the length of the list, return null
+    // Loop through the list until you reach the index and return the node at that specific index 
     get(index) { 
         if (index < 0 || index >= this.length) return null; 
         let counter = 0; 
@@ -113,6 +142,12 @@ class SinglyLinkedList{
         }
         return current 
     }
+    //SET changes the value of a node based on its position in the Linked List
+    //PSEUDOCODE
+    // The function should accept a index and value
+    // Use get function to find the specific node
+    // If node is not found, return false
+    // If it is, set value of that node to be the value passed to the function and return true
     set(index, val) {
         let foundNode = this.get(index);
         if (foundNode) { 
@@ -121,6 +156,18 @@ class SinglyLinkedList{
         }
         return false; 
     }
+    //INSERT adds a node to the Linked List at a specific position
+    //PSEUDOCODE
+    // The function should accept an index and value
+    // If index is less than zero or greater than the length, return false 
+    // If index is the same as the length. push a new node to the end of the lisst. 
+    // If index is 0, unshift a new node to the start of the list
+    // Use get function, pass in index - 1 (because we need the node before it) 
+    // to find the specific node 
+    // Set the next property on that node to be the new node 
+    // Set the next property omn that new node to be thge previous next
+    // Increment the length 
+    // Return true 
     insert(index, val) {
         if (index < 0 || index > this.length) return false; 
         //push + unshift currently do not return booleans. Instead of
@@ -138,6 +185,15 @@ class SinglyLinkedList{
         this.length++; 
         return true; 
     }
+    //REMOVE removes a node from the given index
+    //PSEUDOCODE
+    // If the index is less than zero or greater than the length, return undefined
+    //If the index is the same as the length-1, pop
+    //If the index is 0, shift 
+    //Otherwise, using get, access the node at the index 0-1 
+    //Set the next property on that node to be the next of the next node
+    //Decrement the length 
+    //Return the value of the node removed 
     remove(index) { 
         if (index < 0 || index >= this.length) return undefined; 
         if (index === 0) return this.shift(); 
@@ -149,6 +205,16 @@ class SinglyLinkedList{
 
         return removed; 
     }
+    //REVERSE reverses a singly linked list in place (that is, don't make a copy)
+    //PSEUDOCODE
+    //Swap the head and the tail 
+    //Create variables called next and prev 
+    //Create a variable called node and initialize it to the head property
+    //Loop through the list 
+    //Set next to be the next property on whatver node is
+    //Set the next property on the node to be whatver prev is 
+    //Set prev to be the balue of the node variable
+    //Set the node varibale to the value of the next variable. 
     reverse() {
         let node = this.head;
         this.head = this.tail; 
@@ -166,108 +232,6 @@ class SinglyLinkedList{
         return this;
     }
 }
-
-//********************************************************
-
-//POP involves going through the entire list from the beginning since
-//we have no backwards pointer 
-
-//PSEUDOCODE
-
-// If there are no nodes in the list, return undefined (mo head, if length === 0)
-// Loop through the list until you reach the tail
-// Set the next property of the 2nd to lasty node to be null
-// Set the tail to be the 2nd to last node 
-// Decrement the length of the list by 1
-// Return the value of the node removed
-
-//********************************************************
-
-//SHIFT
-
-//PSEUDOCODE
-
-// If there aren't any nodes, return undefined. This is our main edge case. 
-// Store the current head property in a variable. 
-// Set the head property to be the current head's next property. 
-// Decrement the length by 1. 
-// Finally, return the value of the node removed.
-
-//********************************************************
-
-//UNSHIFT
-
-//PSEUDOCODE
-// The function shoulkd accept a value 
-// Create a new node using the value passed to the function 
-// If there is no head property on the list, set the head and tail to be newly created node
-// Otherwise, set the newly created node's next property to be the current head 
-// property on the list 
-// Set the head property on the list to be that newly created node
-// Increment the length of the list by 1 
-// Return the linked list
-
-//********************************************************
-
-//GET retrieves a node by it's positon in the linked list 
-
-//PSEUDOCODE
-// The function should accept a value 
-// If the index is less than zero or gretaer than the length of the list, return null
-// Loop through the list until you reach the index and return the node at that specific index 
-
-/********************************************************
-
-//SET changes the value of a node based on its position in the Linked List
-
-//PSEUDOCODE
-// The function should accept a index and value
-// Use get function to find the specific node
-// If node is not found, return false
-// If it is, set value of that node to be the value passed to the function and return true
-
-/********************************************************
-
-//INSERT adds a node to the Linked List at a specific position
-
-//PSEUDOCODE
-// The function should accept an index and value
-// If index is less than zero or greater than the length, return false 
-// If index is the same as the length. push a new node to the end of the lisst. 
-// If index is 0, unshift a new node to the start of the list
-// Use get function, pass in index - 1 (because we need the node before it) 
-// to find the specific node 
-// Set the next property on that node to be the new node 
-// Set the next property omn that new node to be thge previous next
-// Increment the length 
-// Return true 
-
-//********************************************************
-
-//REMOVE removes a node from the given index
-
-//PSEUDOCODE
-// If the index is less than zero or greater than the length, return undefined
-//If the index is the same as the length-1, pop
-//If the index is 0, shift 
-//Otherwise, using get, access the node at the index 0-1 
-//Set the next property on that node to be the next of the next node
-//Decrement the length 
-//Return the value of the node removed 
-
-//********************************************************
-
-//REVERSE reverses a singly linked list in place (that is, don't make a copy)
-
-//PSEUDOCODE
-//Swap the head and the tail 
-//Create variables called next and prev 
-//Create a variable called node and initialize it to the head property
-//Loop through the list 
-//Set next to be the next property on whatver node is
-//Set the next property on the node to be whatver prev is 
-//Set prev to be the balue of the node variable
-//Set the node varibale to the value of the next variable. 
 
 //********************************************************
 
