@@ -20,5 +20,29 @@ class DoublyLinkedList {
         this.tail = null; 
         this.length = 0; 
     }
-    
+    push(val) {
+        let newNode = new Node(val); 
+        if (this.length === 0) { 
+            this.head = newNode; 
+            this.tail = newNode; 
+        } else { 
+            this.tail.next = newNode; 
+            newNode.prev = this.tail; 
+            this.tail = newNode; 
+        }
+        this.length++; 
+        return this;    
+    }
 }
+
+//********************************************************
+
+//PUSH Pseudocode 
+//Create a new node with the value passsed to the function 
+//If the head property is null, set the head and tail to be the newly created ndoe
+//If not, set the next property on the tail to be that node
+//Set the previous property on the newly created node to be the tail
+//Set the tail to be the newly created node
+//Incrememnt the length
+//Return the DLL
+
