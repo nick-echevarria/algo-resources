@@ -226,9 +226,9 @@ class SinglyLinkedList{
 // Increment the length 
 // Return true 
 
-/********************************************************
+//********************************************************
 
-//REMOVE adds a node to the Linked List at a specific position
+//REMOVE removes a node from the given index
 
 //PSEUDOCODE
 // If the index is less than zero or greater than the length, return undefined
@@ -238,6 +238,23 @@ class SinglyLinkedList{
 //Set the next property on that node to be the next of the next node
 //Decrement the length 
 //Return the value of the node removed 
+
+//********************************************************
+
+//REVERSE reverses a singly linked list in place (that is, don't make a copy)
+
+//PSEUDOCODE
+//Swap the head and the tail 
+//Create variables called next and prev 
+//Create a variable called node and initialize it to the head property
+//Loop through the list 
+//Set next to be the next property on whatver node is
+//Set the next property on the node to be whatver prev is 
+//Set prev to be the balue of the node variable
+//Set the node varibale to the value of the nexy variable. 
+
+
+
 
 
 
