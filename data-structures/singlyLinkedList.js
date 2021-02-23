@@ -138,6 +138,17 @@ class SinglyLinkedList{
         this.length++; 
         return true; 
     }
+    remove(index) { 
+        if (index < 0 || index >= this.length) return undefined; 
+        if (index === 0) return this.shift(); 
+        if (index === this.length - 1) return this.pop(); 
+
+        let prevNode = this.get(index - 1); 
+        let removed = prevNode.next; 
+        prevNode.next = removed.next; 
+
+        return removed; 
+    }
 }
 
 //********************************************************
@@ -214,6 +225,21 @@ class SinglyLinkedList{
 // Set the next property omn that new node to be thge previous next
 // Increment the length 
 // Return true 
+
+/********************************************************
+
+//REMOVE adds a node to the Linked List at a specific position
+
+//PSEUDOCODE
+// If the index is less than zero or greater than the length, return undefined
+//If the index is the same as the length-1, pop
+//If the index is 0, shift 
+//Otherwise, using get, access the node at the index 0-1 
+//Set the next property on that node to be the next of the next node
+//Decrement the length 
+//Return the value of the node removed 
+
+
 
 
 
