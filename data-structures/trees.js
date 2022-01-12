@@ -113,6 +113,33 @@ class BinarySearchTree {
         if (!found) return false; 
         return current; 
     }
+    //Breadth-First Search (horizontal search, every level of tree)
+    //Create a queue (FIFO structure) and a variable to store
+    //the value of nodes visited
+    //Place the root node in the queue 
+    //Loop as long as there is anything in the queue
+        //Dequeue a node from the queue and push the value of the node into 
+        //the variable that stores the node
+        //If there is a left prop on the dequeued node, add it to the queue
+        //If there is a right propr on the dequeued node, add it to the queue
+    //Return the variable that stores the values
+    BFS() { 
+        let data = []; 
+        let queue = []; 
+        let node = this.root;
+        
+        queue.push(node); 
+    
+        //JS doesn't see empty array as false so instead:
+        while (queue.length) { 
+            node = queue.shift();
+            data.push(node); 
+            if (node.left) queue.push(node.left); 
+            if (node.right) queue.push(node.right);
+        }
+        
+        return data;
+    }
 };
 
 //********************************************************
