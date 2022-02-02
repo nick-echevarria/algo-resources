@@ -13,7 +13,7 @@
 // to help debug code, a "way to formalize fuzzy counting", allow us to talk about how the runtime of an algorithm grows
 // as the inputs grow.
 
-// Instead of using time, which is variable affected  on machine used, etc., we can count the number of
+// Instead of using time, which is variable affected on machine used, etc., we can count the number of
 // simple operations a computer needs to perform. However, we don't care too much about the number of operations, 
 // but rather about the general trends. We're concerned with the order of magnitude. 
 
@@ -43,11 +43,11 @@
 //Rules of thumb: 
 
 //Most primitives are constant space
-//String require O(n) space (where n is string length)
+//Strings require O(n) space (where n is string length)
 //Reference types are generally O(n), where n is the length (arrays) or number of keys (for objects)
 
 //////// What's a log? ////////
 
 //Represents the opposite of exponentiation. It answers the question "X to what power gives us Y?"
-//
+
 

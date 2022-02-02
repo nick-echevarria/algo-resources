@@ -71,7 +71,7 @@ function hash(key, arrayLen) {
 
 //********************************************************
 
-class HashTable{
+class HashTable {
     constructor(size = 53) {
         this.keyMap = new Array(size);
     }

@@ -1,8 +1,10 @@
-//This pattern involves dividing a data set into
-//smaller chunks then repeating a process with
-//a subset of data. This pattern can tremendously
-//decrease time complexity 
+// This pattern involves dividing a data set into
+// smaller chunks then repeating a process with
+// a subset of data. This pattern can tremendously
+// decrease time complexity. It's at the core of many 
+// more complex approaches.
 
+// Time - O(logn)
 function search(arr, val) { 
 
     let min = 0; 

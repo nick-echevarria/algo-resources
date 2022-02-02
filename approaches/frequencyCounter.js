@@ -1,4 +1,10 @@
-//
+// This pattern uses objects or sets to collect values:frequencies
+// of values. 
+// This can often avoid the need for nested loops or O(n^2) operations
+// with arrays and strings 
+
+//We'll want to avoid nested loops (On^2//quadratic)
+//and use separate loops instead 
 
 function validAnagram(first, second) { 
     //check to see if length is different

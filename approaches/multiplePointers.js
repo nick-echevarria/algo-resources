@@ -1,13 +1,13 @@
 //Multiple pointers employs the use of
 //dual pointers. Each is acted on by different
-//triggers. together, they search the data
+//triggers. Together, they search the data
 //in a sorted array 
 
-//in case you need to sort anything, try .sort()
+//In case you need to sort anything, try .sort()
 
 //this function has pointers at the beginning 
 //and end of an array
-function sumZero(arr) { 
+function sumZero(arr) { // Time Complexity O(n)
     let left = 0; 
     let right = arr.length - 1;
     while (left < right) { 
